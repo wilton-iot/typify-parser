@@ -1,7 +1,8 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 /* global describe:true, it:true */
 "use strict";
 
-var parser = require("../lib/parser.js");
+var parser = require("typify-parser/lib/parser.js");
 var expect = require("chai").expect;
 var fs = require("fs");
 var path = require("path");
@@ -42,3 +43,5 @@ describe("fixtures", function () {
     });
   });
 });
+
+return module.exports;});

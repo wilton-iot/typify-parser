@@ -1,8 +1,11 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 /* global describe:true, it:true */
 "use strict";
 
-var parser = require("../lib/parser.js");
-var expect = require("chai").expect;
+var parser = require("typify-parser/lib/parser.js");
+var expect = require("tape-compat").expect;
+var describe = require("tape-compat").describe;
+var it = require("tape-compat").it;
 
 function fixture(signature) {
   expect(function () {
@@ -30,3 +33,5 @@ describe("errorneous cases", function () {
     fixture("aa ab ;");
   });
 });
+
+return module.exports;});

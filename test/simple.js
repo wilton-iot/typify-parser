@@ -1,8 +1,11 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 /* global describe:true, it:true */
 "use strict";
 
-var parser = require("../lib/parser.js");
-var expect = require("chai").expect;
+var parser = require("typify-parser/lib/parser.js");
+var expect = require("tape-compat").expect;
+var describe = require("tape-compat").describe;
+var it = require("tape-compat").it;
 
 function fixture(signature, json) {
   expect(parser(signature)).to.deep.equal(json);
@@ -16,7 +19,6 @@ describe("simple cases", function () {
 
     fixture("⊤", { type: "true" });
     fixture("⊥", { type: "false" });
-    fixture("𝟙", { type: "unit" });
   });
 
   it("booleans", function () {
@@ -188,3 +190,5 @@ describe("simple cases", function () {
     });
   });
 });
+
+return module.exports;});
